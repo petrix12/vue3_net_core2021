@@ -1,7 +1,7 @@
 # Aplicación de tareas con Vue 3 + Net Core + EFC
 + **URL Curso**: https://www.udemy.com/course/vue3-netcore
-+ **URL Repositorio**: 
-+ **URL App en producción**: 
++ **URL Repositorio**: https://github.com/petrix12/vue3_net_core2021.git
++ **URL App en producción**: https://solucionespp-vue3-net-core.netlify.app
 
 ## Antes de iniciar:
 1. Crear proyecto en la página de [GitHub](https://github.com) con el nombre: **vue3_net_core2021**.
@@ -448,13 +448,24 @@
     + $ git push -u origin main
 
 ### Video 09. Deploy
-
-
-
+1. Compilar el proyecto para producción:
+    + $ npm run build
+    + **Nota**: esta acción genera un proyecto optimizado para producción ubicado en **dist**.
+2. Ir a la página de [netlify](https://www.netlify.com), iniciar sesión e ir a **Site**.
+3. Arrastrar la carpeta para distribución **dist** en la página de netlify.
+4. Ir a **Site settings** y luego a **Change site name** y cambiar el **Site name** a **solucionespp-vue3-net-core**.
+    + **Nota**: ahora podemos ver nuestra aplicación en producción en: https://solucionespp-vue3-net-core.netlify.app
+5. Commit Video 09:
+    + $ git add .
+    + $ git commit -m "Commit 09: Deploy"
+    + $ git push -u origin main
 
 ## Sección 2: BackEnd
 
 ### Video 10. Creación del BackEnd
+
+
+
 ### Video 11. Creación del Modelo
 ### Video 12. Instalacion de dependencias
 ### Video 13. Creación del DbContext y Migraciones
