@@ -7,19 +7,30 @@
                 <div class="card mt-4">
                     <div class="card-body">
                         <div class="input-group">
-                            <input type="text" class="form-control form-control-lg" placeholder="Agregar tarea">
+                            <input 
+                                type="text"
+                                v-model="tarea"
+                                class="form-control form-control-lg" 
+                                placeholder="Agregar tarea"
+                            >
                             <div class="input-group-append">
-                                <button class="btn btn-success btn-lg">Agregar</button>
+                                <button 
+                                    class="btn btn-success btn-lg"
+                                    v-on:click="agregarTarea()"
+                                >Agregar</button>
                             </div>
                         </div>
                         <br>
                         <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between">
+                            <li 
+                                v-for="(tarea, index) of listTareas" :key="index"
+                                class="list-group-item d-flex justify-content-between"
+                            >
                                 <div>
                                     <span class="cursor">
                                         <i class="far fa-circle"></i>
                                     </span>
-                                    Tareas Soluciones++
+                                    {{ tarea.nombre }}
                                 </div>
                                 <span class="text-danger cursor">
                                     <i class="fas fa-trash-alt"></i>
@@ -35,7 +46,23 @@
 
 <script>
     export default {
-        name: 'Tarea'
+        name: 'Tarea',
+        data() {
+            return {
+                tarea: '',
+                listTareas: []
+            }
+        },
+        methods: {
+            agregarTarea() {
+                const tarea = {
+                    nombre: this.tarea,
+                    estado: false
+                }
+                this.listTareas.push(tarea)
+                this.tarea = ''
+            }
+        }
     }
 </script>
 
