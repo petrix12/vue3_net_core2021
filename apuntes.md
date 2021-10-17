@@ -57,10 +57,76 @@
     + $ git push -u origin main
 
 ### Video 03. Creación TareaComponent y Agregamos bootstrap
+1. Agregar el CDN CSS de Bootstrap en public\index.html:
+    ```html
+    <!DOCTYPE html>
+    <html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <noscript>
+            <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        </noscript>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+    </body>
+    </html>
+    ```
+    + https://getbootstrap.com/docs/5.1/getting-started/introduction
+2. Eliminar el componente **src\components\HelloWorld.vue**.
+3. Modificar **src\App.vue**:
+    ```vue
+    <template>
+        <Tarea />
+    </template>
 
+    <script>
+    import Tarea from '@/components/Tarea'
 
+    export default {
+        name: 'App',
+        components: {
+            Tarea
+        }
+    }
+    </script>
+
+    <style>
+    </style>
+    ```
+4. Crear el componente **src\components\Tarea.vue**:
+    ```vue
+    <template>
+        <div>
+            <h1>Soluciones++</h1>
+        </div>
+    </template>
+
+    <script>
+        export default {
+            name: 'Tarea'
+        }
+    </script>
+
+    <style scoped>
+
+    </style>
+    ```
+5. Commit Video 03:
+    + $ git add .
+    + $ git commit -m "Commit 03: Creación TareaComponent y Agregamos bootstrap"
+    + $ git push -u origin main
 
 ### Video 04. TareaComponent HTML
+
+
+
 ### Video 05. Agregamos FontAwesome
 ### Video 06. Agregamos tarea al listado
 ### Video 07. Eliminar Tarea
