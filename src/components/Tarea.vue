@@ -22,14 +22,19 @@
                         </div>
                         <br>
                         <h5 v-if="listTareas.length == 0">No hay tareas para realizar</h5>
+                        <!-- {{ listTareas }} -->
                         <ul class="list-group">
                             <li 
                                 v-for="(tarea, index) of listTareas" :key="index"
                                 class="list-group-item d-flex justify-content-between"
                             >
                                 <div>
-                                    <span class="cursor">
-                                        <i class="far fa-circle"></i>
+                                    <span 
+                                        class="cursor"
+                                        v-bind:class="{'text-success' : tarea.estado}"
+                                        v-on:click="editarTarea(tarea, index)"
+                                    >
+                                        <i v-bind:class="[tarea.estado ? 'fas fa-check-circle' : 'far fa-circle']"></i>
                                     </span>
                                     {{ tarea.nombre }}
                                 </div>
@@ -65,6 +70,9 @@
             },
             eliminarTarea(index){
                 this.listTareas.splice(index, 1)
+            },
+            editarTarea(tarea, index){
+                this.listTareas[index].estado = !tarea.estado
             }
         }
     }
