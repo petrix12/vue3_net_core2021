@@ -124,10 +124,39 @@
     + $ git push -u origin main
 
 ### Video 04. TareaComponent HTML
-
-
+1. Modificar **src\components\Tarea.vue**:
+    ```vue
+    <template>
+        <div>
+            <h1 class="display-4 text-center">Lista de tareas</h1>
+            <hr>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-lg" placeholder="Agregar tarea">
+                                <div class="input-group-append">
+                                    <button class="btn btn-success btn-lg">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    ≡
+    ```
+2. Commit Video 04:
+    + $ git add .
+    + $ git commit -m "Commit 04: TareaComponent HTML"
+    + $ git push -u origin main
 
 ### Video 05. Agregamos FontAwesome
+
+
+
 ### Video 06. Agregamos tarea al listado
 ### Video 07. Eliminar Tarea
 ### Video 08. Editar Tarea### Video 0
@@ -155,10 +184,6 @@
 ### 24. Deploy FrontEnd
 ### 25. Conexión remota SQLServer (Azure)
 ### 26. Despedida
-
-0.45 - x
-1 - 321
-
 
 
     ≡
