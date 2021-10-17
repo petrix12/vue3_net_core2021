@@ -304,10 +304,56 @@
     + $ git push -u origin main
 
 ### Video 07. Eliminar Tarea
+1. Modificar **src\components\Tarea.vue**:
+    ```vue
+    <template>
+        <div>
+            <h1 class="display-4 text-center">Lista de tareas</h1>
+            <hr>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            ≡
+                            <br>
+                            <h5 v-if="listTareas.length == 0">No hay tareas para realizar</h5>
+                            <ul class="list-group">
+                                <li 
+                                    v-for="(tarea, index) of listTareas" :key="index"
+                                    class="list-group-item d-flex justify-content-between"
+                                >
+                                    ≡
+                                    <span class="text-danger cursor" v-on:click="eliminarTarea(index)">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
 
+    <script>
+        export default {
+            ≡
+            methods: {
+                ≡
+                eliminarTarea(index){
+                    this.listTareas.splice(index, 1)
+                }
+            }
+        }
+    </script>
+    ≡
+    ```
+2. Commit Video 07:
+    + $ git add .
+    + $ git commit -m "Commit 07: Eliminar Tarea"
+    + $ git push -u origin main
 
-
-### Video 08. Editar Tarea### Video 0
+### Video 08. Editar Tarea
 ### Video 09. Deploy
 
 ## Sección 2: BackEnd
