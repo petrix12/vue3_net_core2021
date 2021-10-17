@@ -38,10 +38,28 @@
     + $ git push -u origin main
 
 ### Video 02. Creación del Proyecto - Instalación de extensiones y agregamos bootstrap
-
-
+1. Crear proyecto:
+    + $ vue create 29vue3_net_core
+    + Seleccionar: Default (Vue 3) ([Vue 3] babel, eslint)
+2. Ingresar y levantar el proyecto:
+    + $ cd 29vue3_net_core
+    + $ npm run serve
+3. Instalar las siguientes extensiones de VSCode:
+    + Vetur v0.35.0
+        + Pine Wu
+        + Vue tooling for VS Code
+    + Vue VSCode Snippets v2.2.1
+        + sarah.drasner
+        + Snippets that will supercharge your Vue workflow
+4. Commit Video 02:
+    + $ git add .
+    + $ git commit -m "Commit 02: Creación del Proyecto - Instalación de extensiones y agregamos bootstrap"
+    + $ git push -u origin main
 
 ### Video 03. Creación TareaComponent y Agregamos bootstrap
+
+
+
 ### Video 04. TareaComponent HTML
 ### Video 05. Agregamos FontAwesome
 ### Video 06. Agregamos tarea al listado
