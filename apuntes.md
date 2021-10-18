@@ -489,8 +489,75 @@
     + $ git push -u origin main
 
 ### Video 11. Creación del Modelo
++ https://www.entityframeworktutorial.net/code-first/dataannotation-in-code-first.aspx
+1. En el proyecto **backend-tarea**:
+    + Agregar carpeta: **Models**.
+        + Agregar clase: **Tarea.cs**.
+2. Definir clase **backend\backend-tarea\backend-tarea\Models\Tarea.cs**:
+    ```cs
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
+    namespace backend_tarea.Models
+    {
+        public class Tarea
+        {
+            public int Id { get; set; }
+            [Required]
+            [Column(TypeName = "varchar(100)")]
+            public string Nombre { get; set; }
+            [Required]
+            public bool Estado { get; set; }
+        }
+    }
+    ```
+3. Eliminar clase **backend\backend-tarea\backend-tarea\WeatherForecast.cs**.
+4. Crear controlador **Controlador de API con acciones de lectura y escritura**:
+    + backend\backend-tarea\backend-tarea\Controllers\DefaultController.cs
+5. Eliminar controlador **backend\backend-tarea\backend-tarea\Controllers\WeatherForecastController.cs**.
+6. Programar el controlador **backend\backend-tarea\backend-tarea\Controllers\DefaultController.cs**:
+    ```cs
+    using Microsoft.AspNetCore.Mvc;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
 
+    // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+    namespace backend_tarea.Controllers
+    {
+        [Route("api/[controller]")]
+        [ApiController]
+        public class DefaultController : ControllerBase
+        {
+            // GET: api/<DefaultController>
+            [HttpGet]
+            public string Get()
+            {
+                return "Aplication corriendo..";
+            }
+        }
+    }
+    ```
+7. Modificar el archivo de propiedades **backend\backend-tarea\backend-tarea\Properties\launchSettings.json**:
+    + Cambiar:
+    ```json
+    "launchUrl": "weatherforecast",
+    ```
+    + Por:
+    ```json
+    "launchUrl": "api/Default",
+    ```
+8. Compilar (**► IIS Express**) la aplicación para verificar que todo sigue funcionando correctamente.
+9. Commit Video 11:
+    + $ git add .
+    + $ git commit -m "Commit 11: Creación del Modelo"
+    + $ git push -u origin main
 
 ### Video 12. Instalacion de dependencias
 ### Video 13. Creación del DbContext y Migraciones
