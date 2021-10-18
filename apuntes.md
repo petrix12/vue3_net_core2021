@@ -21,6 +21,17 @@
 1. Programas requeridos:
     + [Node Js](https://nodejs.org)
     + [Visual Studio Code](https://code.visualstudio.com/download)
+    + [Visual Studio 2019](https://visualstudio.microsoft.com/es/vs)
+        + **Nota 1**: descargar la versión **Community 2019**.
+        + **Nota 2**: durante la instalación seleccionar "Desarrollo de ASP.NET y web"
+    + [SDK Net Core](https://dotnet.microsoft.com/download)
+        + Nota: descargar el **SDK Net Cote 3.1**.
+    + [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
+    + [Microsft SQL Express](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
+        + **Nota 1**: antes descargar e intalar **SQL Server Management Studio**.
+        + **Nota 2**: realizar la instalación básica.
+        + Copiar los datos de conexión:
+            + **Cadena de conexión**: Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
 2. Instalación de **Vue CLI**:
     + Abrir terminal como administrador.
     + $ npm install -g @vue/cli
@@ -463,10 +474,24 @@
 ## Sección 2: BackEnd
 
 ### Video 10. Creación del BackEnd
-
-
++ https://visualstudio.microsoft.com/es/vs
++ https://dotnet.microsoft.com/download
++ https://www.microsoft.com/es-es/sql-server/sql-server-downloads
++ https://www.youtube.com/watch?v=iYBXDQvIgTk
++ https://www.youtube.com/watch?v=Wktc7m7rX0s
+1. Ejecutar **Visual Studio 2019** y crear un nuevo proyecto **ASP.NET Core Web API**. <!-- (ASP.NET Core Web Application) -->
+2. Configuración del nuevo proyecto:
+    + Nombre del proyecto: backend-tarea
+    + Ubicación: C:\xampp\htdocs\cursos\29vue3_net_core\backend
+3. Commit Video 10:
+    + $ git add .
+    + $ git commit -m "Commit 10: Creación del BackEnd"
+    + $ git push -u origin main
 
 ### Video 11. Creación del Modelo
+
+
+
 ### Video 12. Instalacion de dependencias
 ### Video 13. Creación del DbContext y Migraciones
 ### Video 14. Creación TareaController y Get Tareas
