@@ -560,6 +560,17 @@
     + $ git push -u origin main
 
 ### Video 12. Instalacion de dependencias
+1. Ubicados en el proyecto **backend-tarea** en **Visual Studio 2019**:
+    + Ir a **Herramientas > Administrador de paquetes NuGet > Administrar paquete NuGet para solución...**.
+    + Ir a la pestaña **Examinar** y buscar las siguientes dependencias e instalarlas:
+        + Microsoft.EntityFrameworkCore.
+        + Microsoft.EntityFrameworkCore.Tools.
+        + Microsoft.EntityFrameworkCore.SqlServer
+2. Commit Video 12:
+    + $ git add .
+    + $ git commit -m "Commit 12: Instalacion de dependencias"
+    + $ git push -u origin main
+
 ### Video 13. Creación del DbContext y Migraciones
 ### Video 14. Creación TareaController y Get Tareas
 ### Video 15. POST Guardar Tarea
